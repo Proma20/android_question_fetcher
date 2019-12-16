@@ -1,0 +1,30 @@
+<h2>Stack Overflow Android Questions</h2>
+<div id = "questions-container">
+  <div class="switch-field">
+		<input type="radio" id="radio-one" name="switch-one" value="yes" (change) = "questionByLatest()"  checked/>
+		<label for="radio-one">Most Recent</label>
+		<input type="radio" id="radio-two" name="switch-one" (change) = "questionByVote()" value="no" />
+    <label for="radio-two">Most Voted</label>
+    <div>
+      <button id = "descending" class="sort-class" type = "button" (click)= "sortQuestions()">Sort by vote Descending</button>
+    </div>
+	</div>
+  <div *ngFor="let item of items" class="card card-1" id={{item.question_id}} (click)="showThread(item.question_id)">
+    <h2>{{item.title}}</h2>
+  
+      <p>
+        Created On: {{item.creation_date}}
+      </p>
+      <p>
+        Vote: {{item.score}}
+      </p>
+      <a href="{{item.link}}">Go to this question thread</a>
+  </div>
+</div>
+
+<div id="back-button-container" class = "hide-elements">
+  <button type = "button" id = "back-button" (click) = "backToList()">Back to the question list</button>
+</div>
+
+<div id="question-thread" class = "hide-elements">
+</div>	
