@@ -5,7 +5,7 @@ const path = require('path');
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static(__dirname + '/android_question_fetcher>'));
+app.use(express.static(__dirname + '/android_question_fetcher'));
 
 app.get('/*', function(req,res) {
     
