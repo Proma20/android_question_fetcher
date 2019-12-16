@@ -1,27 +1,49 @@
 # AndroidQuestionFetcher
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
+Angular based website that shows android related questions from stack overflow
 
-## Development server
+## Installation of Project Prerequisites
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Setup NodeJS
 
-## Code scaffolding
+- [NodeJS 10](https://nodejs.org/en/) for running the Angular project
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Setup Angular
 
-## Build
+- npm install -g @angular/cli
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Preparing Project for Development
 
-## Running unit tests
+```sh
+# goto project root
+cd YOUR_PROJECT_ROOT_DIRECTORY
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# goto android-question-fetcher folder
+cd android-question-fetcher
 
-## Running end-to-end tests
+# install node dependencies
+npm install
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+# start server
+ng serve
 
-## Further help
+# open your browser on "http://localhost:4200/"
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### API used
+
+In this project, stack exchange API has been used to collect data about stack overflow using a key. This key was given by stack app after the website was registered. 
+
+### Platform and Browser used for Development
+- This app has been developped in a windows 10 machine
+- Google chrome was used for all testing purposes
+
+### Features
+
+- The start page shows 10 most recent questions of stack overflow on android. 
+- There is a radio button that can be used to select "Most Voted". By selecting this option, the page will show 10 most voted Android-related questions that are created in the past week.
+- Along with the question title, each element shows the date of creation, vote and link to the stack overflow site for that question.
+- If one of the elements are clicked, the whole question statement along with the answers(if any) from the stack over flow question thread is shown.
+- Each answer shows votes on the top.
+- Return to the start page is possible by clicking the "Back to the question list" button.
+- There is a "Sort by vote" button that can be used to sort the questions in ascending/descending order by vote. This can help to find out high/low voted questions easily.
