@@ -9,7 +9,7 @@ app.use(express.static(__dirname + '/android_question_fetcher'));
 
 app.get('/*', function(req,res) {
     
-res.sendFile(path.join(__dirname+'/android_question_fetcher/index.html'));
+res.sendFile(path.join(__dirname+'/android_question_fetcher/src/index.html'));
 });
 
 // Start the app by listening on the default Heroku port
